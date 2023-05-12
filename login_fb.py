@@ -41,7 +41,8 @@ class use_unittest(unittest.TestCase):
 		login_button.click()
 		assert "Couldn't find the element" not in driver.page_source, "The element was found on the page"
 			
-
+	def tearDown(self):
+		driver.close()
 
 if __name__ == '__main__':
 	unittest.main()
