@@ -42,6 +42,7 @@ class use_unittest(unittest.TestCase):
 		assert "Couldn't find the element" not in driver.page_source, "The element was found on the page"
 			
 	def tearDown(self):
+		driver = self.driver
 		driver.close()
 
 if __name__ == '__main__':
